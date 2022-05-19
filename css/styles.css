@@ -20,6 +20,7 @@ button-text-color:#F5F4FA;
   --background: #e5e5e5;
   --buttom-line-portfolio: #ececec;
   --border-line-portfolio: #eeeeee;
+  --sociai-icon-color: #afb1b8;
 }
 
 /* GENERAL SECTION */
@@ -59,6 +60,19 @@ ul {
   padding-left: 15px;
   padding-right: 15px;
   /* outline: 3px dotted blueviolet; */
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /***********HEADER **********/
@@ -116,6 +130,7 @@ ul {
 
 .add-nav .link {
   color: var(--second-text-color);
+  align-items: center;
 }
 
 .main-nav .link:hover,
@@ -137,12 +152,18 @@ ul {
   margin-right: 50px;
 }
 
-.item-antenna {
-  fill: red;
-  width: 20px;
-  height: 20px;
+.svg-nav .link {
+  display: flex;
+  align-items: center;
 }
 
+.envelope {
+  color: red;
+}
+
+.link:hover .envelope {
+  color: var(--nav-color);
+}
 /***********************************************/
 /********* INDEX.HTML**************/
 /***********************************************/
@@ -166,9 +187,6 @@ ul {
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/heroimg.jpg);
-
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .hero-title {
@@ -343,6 +361,34 @@ ul {
   text-align: center;
 }
 
+.team-socialnet {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.socialnet-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.team-icon {
+  fill: var(--sociai-icon-color);
+  width: 20px;
+  height: 20px;
+}
+
+.social-link:hover .team-icon {
+  background-color: var(--nav-color);
+  fill: var(--add-text-color);
+}
+
 /* ***********SECTION CLIENTS********************* */
 .clients {
   padding-bottom: 94px;
@@ -361,6 +407,11 @@ ul {
 .clients-list .item:not(:last-child) {
   margin-right: 30px;
 }
+
+.item-client {
+  fill: #2196f3;
+}
+
 /***********************************************/
 /********* PORTFOLIO.HTML**************/
 /***********************************************/
@@ -388,6 +439,10 @@ img {
 }
 
 .btn-ptfolio {
+  border: none;
+}
+
+.btn-ptfolio {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -409,6 +464,7 @@ img {
 .btn-ptfolio:focus {
   color: var(--add-text-color);
   background-color: var(--nav-color);
+  box-shadow: 0px 4px 4px 0px rgb(0, 0, 0, 0.25);
 }
 
 /*************SECTION PROJECTS **********************/
