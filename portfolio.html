@@ -44,10 +44,20 @@
         </nav>
         <ul class="add-nav">
           <li class="item">
-            <a href="mailto:info@example.com" class="link">info@example.com</a>
+            <a href="mailto:info@example.com" class="link env-phone">
+              <svg class="item-nav" width="16px" height="12px">
+                <use href="./images/icons.svg#envelope"></use>
+              </svg>
+              info@example.com
+            </a>
           </li>
           <li class="item">
-            <a href="tel:+380991111111" class="link">+38 099 111 11 11</a>
+            <a href="tel:+380991111111" class="link env-phone">
+              <svg class="item-nav" width="10px" height="16px">
+                <use href="./images/icons.svg#smartphone"></use>
+              </svg>
+              +38 099 111 11 11</a
+            >
           </li>
         </ul>
       </div>
@@ -204,24 +214,61 @@
       </section>
     </main>
     <footer class="footer">
+      <!-- <div class="footer-block"> -->
       <div class="container contact-address">
-        <a lang="en" href="" class="link logo second"
-          >Web<span class="accent-footer">Studio</span></a
-        >
-        <address class="contacts">
-          <p class="contact-place">г. Киев, пр-т Леси Украинки, 26</p>
-          <ul class="contacts-info">
-            <li class="item">
-              <a href="mailto:info@example.com" class="link"
-                >info@example.com</a
-              >
+        <div>
+          <a lang="en" href="" class="link logo second"
+            >Web<span class="accent-footer">Studio</span></a
+          >
+          <address class="contacts">
+            <p class="contact-place">г. Киев, пр-т Леси Украинки, 26</p>
+            <ul class="contacts-info">
+              <li class="item">
+                <a href="mailto:info@example.com" class="link">
+                  info@example.com</a
+                >
+              </li>
+              <li class="item">
+                <a href="tel:+380991111111" class="link">+38 099 111 11 11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="join-block">
+          <h2 class="join-title">Присоединяйтесь</h2>
+          <ul class="logos-list add-block">
+            <li class="snet-item">
+              <a href="" class="logo-item bgc-footer">
+                <svg class="logo-snet footer-block" width="20" height="20">
+                  <use href="./images/icons.svg#instagram"></use>
+                </svg>
+              </a>
             </li>
-            <li class="item">
-              <a href="tel:+380991111111" class="link">+38 099 111 11 11</a>
+            <li class="snet-item">
+              <a href="" class="logo-item bgc-footer">
+                <svg class="logo-snet footer-block" width="20px" height="20px">
+                  <use href="./images/icons.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="snet-item">
+              <a href="" class="logo-item bgc-footer">
+                <svg class="logo-snet footer-block" width="20px" height="20px">
+                  <use href="./images/icons.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="snet-item">
+              <a href="" class="logo-item bgc-footer">
+                <svg class="logo-snet footer-block" width="20px" height="20px">
+                  <use href="./images/icons.svg#linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
-        </address>
+        </div>
       </div>
+      <!-- </div> -->
     </footer>
   </body>
 </html>

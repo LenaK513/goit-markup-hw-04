@@ -152,17 +152,19 @@ ul {
   margin-right: 50px;
 }
 
-.svg-nav .link {
+.item .env-phone {
   display: flex;
   align-items: center;
 }
 
-.envelope {
-  color: red;
+.item-nav {
+  fill: var(--second-text-color);
+  margin-right: 10px;
 }
 
-.link:hover .envelope {
-  color: var(--nav-color);
+.env-phone:hover .item-nav,
+.env-phone:focus .item-nav {
+  fill: var(--nav-color);
 }
 /***********************************************/
 /********* INDEX.HTML**************/
@@ -209,8 +211,9 @@ ul {
   background-color: var(--nav-color);
   padding: 10px 32px;
   min-width: 200px;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   cursor: pointer;
+  /* border-color: none; */
 }
 
 /*********** VALUES SECTION **************/
@@ -236,7 +239,7 @@ ul {
   margin-bottom: 10px;
 }
 
-.values .item::before {
+/* .values .item::before {
   display: block;
   content: "";
   height: 120px;
@@ -260,6 +263,16 @@ ul {
 
 .astronaut::before {
   background-image: url(../images/astronaut.svg);
+} */
+
+.value-list {
+  display: block;
+  height: 120px;
+  background-color: var(--button-text-color);
+}
+
+.value-list .values-logo {
+  margin: 25px 100px;
 }
 
 .values-info {
@@ -325,6 +338,9 @@ ul {
   margin: 0;
 }
 
+.team {
+  border: 1px solid var(--add-nav-color);
+}
 .team-info .item.item:not(:last-child) {
   margin-right: 30px;
   justify-content: center;
@@ -334,6 +350,7 @@ ul {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  width: 270px;
 }
 
 .list {
@@ -342,7 +359,7 @@ ul {
 
 .team-name {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 }
 
 .team-member {
@@ -361,31 +378,44 @@ ul {
   text-align: center;
 }
 
-.team-socialnet {
+/* **************ICONS(LOVE THEM)********************* */
+.logos-list {
   display: flex;
-  margin: 0;
   padding: 0;
-  justify-content: center;
+  margin-top: 0;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 30px;
 }
 
-.socialnet-item:not(:last-child) {
+.logo-item {
+  display: inline-block;
+  text-decoration: none;
+  height: 44px;
+  width: 44px;
+  /* background-color: #da056f; */
+  margin-right: 10px;
+  justify-content: space-between;
+  border-radius: 50%;
+  align-items: center;
+}
+
+.logo-item:not(:last-child) {
   margin-right: 10px;
 }
 
-.social-link {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-}
-
-.team-icon {
+.logo-snet {
   fill: var(--sociai-icon-color);
-  width: 20px;
-  height: 20px;
+  margin: 12px;
 }
 
-.social-link:hover .team-icon {
+.logo-item:hover,
+.logo-item:focus {
   background-color: var(--nav-color);
+}
+
+.logo-item:hover .logo-snet,
+.logo-item:focus .logo-snet {
   fill: var(--add-text-color);
 }
 
@@ -399,17 +429,33 @@ ul {
   display: flex;
 }
 
-.clients-list .item {
-  width: 172px;
-  height: 92px;
-}
-
 .clients-list .item:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 28.74px;
 }
 
-.item-client {
-  fill: #2196f3;
+.client-item {
+  display: inline-block;
+  text-decoration: none;
+  width: 162.88px;
+  height: 92px;
+  border: 1px solid var(--sociai-icon-color);
+  border-radius: 4px;
+  align-items: center;
+}
+
+.client-item:hover,
+.client-item:focus {
+  border-color: var(--nav-color);
+}
+
+.client-logo {
+  fill: var(--sociai-icon-color);
+  margin: 16px 30.66px;
+}
+
+.client-item:hover .client-logo,
+.client-item:focus .client-logo {
+  fill: var(--nav-color);
 }
 
 /***********************************************/
@@ -527,6 +573,15 @@ img {
   padding-bottom: 60px;
 }
 
+/* .footer-block {
+  display: flex;
+  align-items: flex-start;
+} */
+
+.contact-address {
+  display: flex;
+}
+
 .second {
   margin-right: 0;
 }
@@ -557,4 +612,34 @@ img {
 
 .contacts-info .item:not(:last-child) {
   margin-bottom: 9px;
+}
+
+.join-block {
+  padding-left: 62px;
+}
+.join-title {
+  font-family: Roboto;
+  font-style: 900;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  letter-spacing: 0.03em;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 31px;
+  margin-left: auto;
+  margin-right: auto;
+
+  color: var(--add-text-color);
+}
+
+.add-block {
+  margin-left: 0;
+}
+.footer-block {
+  fill: var(--add-text-color);
+}
+.bgc-footer {
+  background-color: rgb(0, 0, 0, 0.2);
 }
